@@ -13,4 +13,5 @@
     <string name="hint_address">Delivery Address</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="btn_register_txt">Register</string>
+    <string name="txt_welcome_string">Welcome, Your entered details ⬇️</string>
 </resources>

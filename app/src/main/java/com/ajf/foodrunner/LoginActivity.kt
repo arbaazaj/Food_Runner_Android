@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -29,7 +30,21 @@ class LoginActivity : AppCompatActivity() {
         // Button and TextView onclick events.
 
         btnLogin.setOnClickListener {
-            //TODO: need to complete.
+            val mobileNumber = etMobileNumber.text.toString()
+            val password = etPassword.text.toString()
+
+            if (mobileNumber.isNotEmpty() && password.isNotEmpty()) {
+                val intentLogin = Intent(this@LoginActivity, MainActivity::class.java)
+                intentLogin.putExtra("MobileNumber", mobileNumber)
+                intentLogin.putExtra("Password", password)
+                startActivity(intentLogin)
+                etMobileNumber.text.clear()
+                etPassword.text.clear()
+            } else {
+                Toast.makeText(this@LoginActivity, "Please enter credentials", Toast.LENGTH_LONG)
+                    .show()
+            }
+
         }
 
         // TextView on clicks.
