@@ -6,4 +6,6 @@
     <string name="btn_login_txt">Login</string>
     <string name="txt_forgot_password">Forgot Password?</string>
     <string name="txt_register_txt">Don\'t have an Account? Sign up now</string>
+    <string name="txtInfoText">Enter your registered mobile number and email address below</string>
+    <string name="btn_reset_password_txt">Reset Password</string>
 </resources>
