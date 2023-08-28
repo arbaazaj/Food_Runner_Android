@@ -19,8 +19,13 @@ class MainActivity : AppCompatActivity() {
         if (intent != null) {
             val mobile = intent.getStringExtra("MobileNumber")
             tvMobile.text = mobile
-            val password = intent.getStringExtra("Password")
-            tvPassword.text = password
+            val message = intent.getStringExtra("Password")
+            val email = intent.getStringExtra("Email")
+            val name = intent.getStringExtra("Name")
+            val address = intent.getStringExtra("Address")
+            val confirmPass = intent.getStringExtra("ConfirmPassword")
+            tvPassword.text = "$name, $email, $message, $confirmPass, $address"
+
         }
     }
 }
